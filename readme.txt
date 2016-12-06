@@ -1,19 +1,16 @@
-The download includes the kernel source code, and a demo application for EVERY
-RTOS port.  See http://www.freertos.org/a00017.html for full details of the 
-directory structure and information on locating the files you require.
+Each RTOS port has a demo application to demonstrate it's use.
 
-The easiest way to use FreeRTOS is start start with one of the demo application 
-projects.  Once this is running the project can be modified to include your own
-source files.  This way the correct files and compiler options will be 
-automatically included in your application.
++ The Demo/Common directory contains the demo application files as described on 
+the http://www.FreeRTOS.org WEB site.  Each file creates one or more tasks.
+The files in the Demo/Common directory are used by every demo application for
+every port.
 
-+ The Source directory contains the real time kernel source files for every 
-port.  The kernel itself is only 3 files.
++ All the other directories contain a project or makefile for the demo
+application targeted at a particular microcontroller.  
 
-+ The Demo directory contains the demo application source files for every 
-port.
 
-+ The TraceCon directory contains the trace visualisation exe file.
-
-See the readme files in the respective directories for further information.
-
+For example, if you are interested in the ATMega323 demo application for
+the WinAVR tools then the AVR_ATMega323_WinAVR directory contains the 
+relevant makefile.  The makefile includes files from the Demo/ATMega323 
+and the Demo/Common directories.  If this is the only port you are 
+interested in then all the other directories can be ignored.
